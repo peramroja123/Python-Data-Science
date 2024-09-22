@@ -419,5 +419,529 @@ From the above outcomes we can say that String is Immmutable.
       Ex:-chr(70)
       o/p:- 'f'
 
+# List
+*Python list is going to accept any data types like int, float, string, boolean.
 
+*Python list is going to represent with [].
+
+    Ex:- a=[10,55.55,'data']
+          print(a)
+    o/p:- [10,55.55,'data']
+
+### 1.Memory Allocation
+    Ex:- a=[10,20,30]
+         print(a)
+    o/p:-[10,20,30]
+### 2.Indexing
+    Ex:-a=[10,15,19,3,7,32,17]
+        print(a[4])
+    o/p:-7
+### 3.Slicing
+    Ex:-print(a[2:5])
+    o/p:- [19,3,7]
+### 4.Skipping
+    Ex 1:-a=[10,15,19,3,7,32,17]
+          print(a[::2])
+    o/p:- [10,19,7,17]
+    Ex 2:-a=[10,15,19,3,7,32,17]
+          print(a[::-1])
+    o/p:-[17,32,7,3,19,15,10]
+### 5.Mutable/Immutable
+list is mutable it can be modified the elements and also elements can be replaced.
+#### add
+    Ex:- a=[10,50,3,13]
+         a[4]=500
+         print(a)
+    o/p:- [10,50,3,13,500]
+### Built_in_Function
+* append
+* extend
+* insert
+* pop
+* remove
+* count
+* index
+* copy
+* clear
+* sort
+* reverse
+### append : It will take the single value from the user and will add the existing list only at the end.
+    
+    Ex:-a=[10,50,3,13]
+        a.append(500)
+        print(a)
+    o/p:-[10,50,3,13,500]
+### extend : It will take multiple values from the user and add to the excisting list only at the end.
+    
+    Ex:-a=[10,50,3,13]
+        a.extend([1,2])
+        print(a)
+    o/p:-[10,50,3,13,1,2]
+### insert : We can add values where ever we want.
+
+    Ex:-a=[10,50,3,13]
+        a.insert(2,300)
+        print(a)
+    o/p:-[10,50,300,3,13]
+### pop : pop will remove last value defaulty but if we pass a number it wull treat like index.
+  
+    Ex:-a=[10,50,3,13]
+        a.pop()
+        print(a)
+    o/p:-[10,50,3]
+### remove : will takes value directly and remove the value
+
+    Ex:-a=[10,50,3,13]
+        a.reove(50)
+        print(a)
+    o/p:-[10,3,13]
+### replace : replace the value
+
+    Ex:-a=[10,50,3,13]
+        a[1]=5
+        print(a)
+    o/p:-[10,5,3,13]
+### count : used to count the values
+
+    Ex:-a=[1,2,4,5,1,3,19,30,1]
+        print(a.count())
+    o/p:- 3
+### index : used to find the index of a given value
+
+    Ex:-a=[1,2,4,5,1,3,19,30,1]
+        print(a.index())
+    o/p:- 6
+### clear : just delete the data in variable but variable will be alive in the memory
+
+    Ex:-a=[1,2,4,5]
+        a.clear()
+        print(a)
+    o/p:-[]
+### copy -> There are 2 types of copy techniques
+1) deep copy
+2) shallow copy
+
+#### 1.deep copy:
+    Ex 1:-a=[10,20,50]
+        b=a
+        print(a)
+        print(b)
+    o/p:-[10,20,50]
+         [10,20,50]
+    
+    Ex 2:-a=[10,20,50]
+          b=a
+          print(a)
+          print(b)
+          a.append(100)
+          print(a)
+          print(b)
+    o/p:-[10,20,50]
+         [10,20,50]
+         [10,20,50,100]
+         [10,20,50,100]
+#### 2.shallow copy:
+    Ex 1:-a=[10,20,50]
+          b=a.copy()
+          print(a)
+          print(b)
+          a.append(100)
+          print(a)
+          print(b)
+    o/p:- [10,20,50]
+          [10,20,50]
+          [10,20,50,100]
+          [10,20,50]
+### sort : Ascending order and descending order
+   *Ascending order:
+      
+    Ex:-a=[9,1,5,7,11,13,6,2,8]
+        a.sort()
+        print(a)
+    o/p:- [1,2,5,6,7,8,9,11,13]
+   
+   *Descending order:
+    
+    Ex:-a=[9,1,5,7,11,13,6,2,8]
+        a.sort(reverse = True)
+        print(a)
+    o/p:- [13,11,9,8,7,6,5,2,1]
+### reverse : 
+    Ex:-a=[10,20,30,40,50]
+        a.reverse()
+        print(a)
+    o/p:-[50,40,30,20,10]
+## Tuple
+* User can pass anything inside the tuple.
+* Tuple can be represented with paranthesis().
+### Mewmory allocation:
+   
+    Ex:-a=(10,55.55,'data')
+        print(type(a))
+    o/p:-Tuple
+### Indexing :
+
+    Ex:-a=(10,4,17,9,21,36)
+        print(a[2])
+    o/p:-17
+### Slicing:
+   
+    Ex:-a=(10,4,17,9,21,36)
+        print(a[1:4])
+    o/p:-(4,17,9)
+### Skipping:
+
+    Ex:-a=(10,4,17,9,21,36)
+        print(a[::3])
+    o/p:-(10,9)
+#### add: 
+    Ex:-a=(10,4,17,9,21,36)
+        a[6]=500
+        print(a)
+    o/p:- It will show error
+#### del:
+    Ex:-a=(10,4,17,9,21,36)
+        del(a[4])
+        print(a)
+    o/p:-It will show error
+#### From the above sources we got to know that tuple is Immutable.
+## Built_in_functions
+*count
+
+*index
+
+### 1)count:
+    Ex:-a=(10,4,17,9,21,36)
+        print(a.count(4))
+    o/p:-1
+### 2)index:
+    Ex:-a=(10,4,17,9,21,36)
+        print(a.index(17))
+    o/p:-2
+# sets
+Sets are represented with {}
+and python sets are unordered pairs(which means there will be no index concept in sets and no slicing & skipping)
+
+    Ex:- a={10,55.55,'data',(1,2,3)}
+         print(a)
+    o/p:- {'data',10,(1,2,3),55.55}
+* python sets won't allow duplicate values.
+
+      Ex:- a = {10,20,30,50,10,100,20,10}
+            print(a)
+        o/p :- {50,100,20,10,30}
+* Python sets are mutable but they won't allow mutable types inside it.
+
+      Ex:- a={10,55.55,'data',[1,2,3]}
+           print(a)
+      o/p:- It is showing error 
+
+## Built-in-Functions
+* add
+* update
+* pop
+* discard
+* remove
+* clear
+* copy
+* union
+* intersection
+## add : Will take one input from the user and add to existing list randomly
+    Ex:- a={10,5,6,20,98,45}
+         print(f'Before adding:{a}')
+         a.add(600)
+         print(f'After adding:{a}')
+
+    o/p:- Before adding: {98,20,5,6,10,45}
+      After adding: {98,20,5,6,600,10,45}
+
+## update : Will take multiple values from the user and add to the existing list randomly
+
+    Ex:- a={10,5,6,20,98,45}
+         print(f'Before:{a}')
+         a.update([100,200,300])
+         print(f'After:{a}')
+
+    o/p:- Before : {98,20,5,6,10,45}
+          After : {5,6,200,10,20,98,100,300,45}
+        
+## pop : will remove one value randomly
+    Ex:- a={10,5,6,20,98,45}
+         print(f'Before:{a}')
+         a.pop()
+         print(f'After:{a}')
+
+    o/p:- Before : {98,20,5,6,10,45}
+          After : {20,5,6,10,45}
+
+## discard : Will take one value from the user and if the input is available it will remove or else it will be silent.
+
+    Ex:- a={10,5,6,20,98,45}
+         a.discard(98)
+         print(a)
+
+    o/p:- {20,5,6,10,45}
+    
+    Ex:- a={10,5,6,20,98,45}
+         print(a.discard(980))
+
+    o/p:- {98,20,5,6,10,45}
+
+## remove : It takes one input from the user and if the input is available it will remove or else it will through error.
+
+    Ex:- a={10,5,6,20,98,45}
+         print(a.remove(98))
+
+    o/p:- {20,5,6,10,45}
+
+## copy
+### Deep copy : Address same 
+    Ex:- a={10,5,6,20,98,45}
+         b=a
+         print(a)
+         print(b)
+         print(id(a))
+         print(id(b))
+
+    o/p:- {98,20,5,6,10,45}
+          {98,20,5,6,10,45}
+          19860477454
+          19860477454
+### shallow copy : Address different
+    Ex:- a={10,5,6,20,98,45}
+         b=a
+         print(a)
+         print(b)
+         print(id(a))
+         print(id(b))
+
+    o/p:- {98,20,5,6,10,45}
+          {98,20,5,6,10,45}
+          19860477454
+          32647648237
+
+# union : Combine all values in given sets
+
+    Ex:- a={1,2,3,4,5,6}
+         b={5,6,7,8,9,10}
+         print(a.union(b))/print(b.union(a))
+
+    o/p:- {1,2,3,4,5,6,7,8,9,10}
+
+# intersection : Common values in both sets
+
+    Ex:- a={1,2,3,4,5,6}
+         b={5,6,7,8,9,10}
+         print(a.intersection(b))
+
+    o/p:- {5,6}
+
+# clear 
+    Ex:- a={1,10,15,19,25}
+         a.clear()
+         print(a)
+    
+    o/p:- set() ->empty set
+
+# Dictionary
+* Dictionary is used to prepare the structured data.
+* Dictionary will be represented with {} even sets are also represented with {} but dictionary is represented with key value pair where key will be column name and value will be column values.
+
+      Ex:- a={'Age':[30,40,50],'loc':['chennai','banglore','hyd'],'salary':[1200,1800,2200]}
+           print(a)
+
+      o/p:- {'Age':[30,40,50],'loc':['chennai','banglore','hyd'],'salary':[1200,1800,2200]}
+
+* dictionary is mutable but it won't allow mutable types as a key.
+
+## Built_in_functions
+
+* get
+* update
+* pop
+* popitem
+* key
+* value
+* items
+* clear
+* copy
+
+### get : used to call the required data from the existing dictionary
+ 
+    Ex:- b={'apple':500,'carrot':100,'banana':500}
+         print(b.get('carrot'))
+
+    o/p:- 100
+
+### update : used to add key value to the existing dictionary
+
+    Ex:- b={'apple':500,'carrot':100,'banana':1000}
+         b.update({'grapes':200})
+         print(b)
+
+    o/p:- {'apple':500,'carrot':100,'banana':1000,'grapes':200}
+
+### pop : will take key from the user and will remove the key value.
+
+    Ex:-  b={'apple':500,'carrot':100,'banana':1000}
+          b.pop('carrot')
+          print(b)
+    
+    o/p:- {'apple':500,'banana':1000}
+
+### popitem : will remove last key value
+
+    Ex:- b={'apple':500,'carrot':100,'banana':1000}
+         b.popitem()
+         print(b)
+    
+    o/p:- {'apple':500,'carrot':100}
+
+### key 
+
+    Ex:- b={'apple':500,'carrot':100,'banana':1000}
+         print(b.keys())
+    
+    o/p:- dict_keys(['apple','carrot','banana'])
+
+### values
+
+    Ex:- b={'apple':500,'carrot':100,'banana':1000}
+         print(b.values())
+        
+    o/p:- dict_values([500,100,1000])
+
+### items
+    EX:- b={'apple':500,'carrot':100,'banana':1000}
+         print(b.items())
+
+    o/p:- dict_items([('apple',500),('carrot',100),('banana',1000)])
+
+### clear
+    Ex:- b={'apple':500,'carrot':100,'banana':1000}
+         b.clear()
+         print(b)
+    o/p:- {}
+
+* Deep copy and shallow copy are same as in sets.
+
+# Conditional and Control statements
+
+## control Statements : 
+   Control statements in Python are used to manage the flow of execution of a program based on certain conditions. 
+   * For loop
+   * While loop
+   * break
+   * continue
+
+### For loop : A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+
+#### syntax : for [var] in range(s-p,e-p):
+    Ex:- for i in range(11,21):
+         print(i)
+
+    o/p:- 11
+          12 
+          13
+          14
+          15
+          16
+          17
+          18
+          19
+          20
+
+    Ex:- for i in range(1,11):
+         print(i,end='')
+    o/p:- 1 2 3 4 5 6 7 8 9 10
+
+### while loop : With the while loop we can execute a set of statements as long as a condition is true.
+
+    Ex:- a=1
+         while a <= 10:
+             print(a)
+             a=a+1
+
+    o/p:- 1
+          2
+          3
+          4
+          5
+          6
+          7
+          8
+          9
+          10
+
+### break : With the break statement we can stop the loop even if the while condition is true
+
+    Ex:- for i in range(11,21):
+            print(i)
+            if i == 17:
+               break
+    
+    o/p:- 11
+          12
+          13
+          14
+          15
+          16
+          17
+
+### continue : With the continue statement we can stop the current iteration, and continue with the next
+    Ex:- for i in range(11,17):
+           print(i)
+           if i == 13:
+             continue
+    
+    o/p:- 11
+          12
+          14
+          15
+          16
+
+## Conditional Statements:
+ 
+* Conditional Statements are statements in Python that provide a choice for the control flow based on a condition. It means that the control flow of the Python program will be decided based on the outcome of the condition. 
+
+    * if
+    * elif
+    * else
+
+### if : If the simple code of block is to be performed if the condition holds then the if statement is used.
+
+    Ex:- money=20000
+         iphone=50000
+         if money > iphone:
+            print('I will buy iphone')
+
+    o/p:- 
+
+### else : The else keyword catches anything which isn't caught by the preceding conditions.
+
+    Ex:- money=20000
+         iphone=50000
+         if money > iphone:
+            print('I will buy iphone')
+         else:
+            print('I dont have enough money')
+
+    o/p:- I dont have enough money
+
+### elif : The elif keyword is Python's way of saying "if the previous conditions were not true, then try this condition".
+
+    Ex:- money=20000
+         iphone=50000
+         samsung=25000
+         vivo=15000
+         if money > iphone:
+            print('I will buy iphone')
+         elif money > samsung:
+            print('I will buy samsung')
+         elif money > vivo:
+            print('I will buy vivo')
+         else:
+            print('I dont have enough money')
+
+    o/p:- I will buy vivo
 
